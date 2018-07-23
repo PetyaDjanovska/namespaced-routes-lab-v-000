@@ -9,6 +9,7 @@ class ArtistsController < ApplicationController
 
   def new
     preference = Preference.first
+    binding.pry
     if preference.allow_create_artists == false
       binding.pry
       redirect_to artists_path
